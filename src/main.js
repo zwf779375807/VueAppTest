@@ -5,13 +5,15 @@ Vue.use(VueRouter)
 import app from './App.vue'
 import 'mint-ui/lib/style.css'
 import './lib/css/mui.css'
+import './lib/css/icons-extra.css'
 import {
     Header
 } from 'mint-ui'
-
+import router from './router.js'
 Vue.component(Header.name, Header)
 
 var vm = new Vue({
     el: "#app",
-    render: c => c(app)
+    render: c => c(app),
+    router
 })
