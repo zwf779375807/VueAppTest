@@ -5,6 +5,10 @@ import ShoppingContainer from './compand/Shopping.vue'
 import SearchContainer from './compand/Search.vue'
 var vueRouter = new VueRouter({
     routes: [{
+            path: '/',
+            redirect: '/home'
+        },
+        {
             path: '/home',
             component: HomeContainer
         },
