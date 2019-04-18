@@ -1,0 +1,44 @@
+.mint-swipe {
+  height: 200px;
+
+  .mint-swipe-item {
+    &:nth-child(1) {
+      background-color: red
+    }
+
+    &:nth-child(2) {
+      background-color: blue
+    }
+
+    &:nth-child(3) {
+      background-color: green
+    }
+  }
+}
+
+.banner-img {
+  width: 100%;
+  height: 100%;
+}
+
+.mui-col-sm-3 {
+  width: 33%;
+}
+
+.mui-grid-view.mui-grid-9 {
+  background-color: white;
+}
+
+.mui-grid-view.mui-grid-9 .mui-table-view-cell {
+  border-right: 0 solid transparent;
+  border-bottom: 0 solid transparent;
+
+  img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .mui-media-body {
+    font-size: 13px
+  }
+}

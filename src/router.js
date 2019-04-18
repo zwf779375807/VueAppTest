@@ -1,8 +1,8 @@
 import VueRouter from 'vue-router'
-import HomeContainer from './compand/Home.vue'
-import MemberContainer from './compand/Member.vue'
-import ShoppingContainer from './compand/Shopping.vue'
-import SearchContainer from './compand/Search.vue'
+import HomeContainer from './compand/HomeContainer/Home.vue'
+import MemberContainer from './compand/MemberContainer/Member.vue'
+import ShoppingContainer from './compand/ShoppingContainer/Shopping.vue'
+import SearchContainer from './compand/SearchContainer/Search.vue'
 var vueRouter = new VueRouter({
     routes: [{
             path: '/',
