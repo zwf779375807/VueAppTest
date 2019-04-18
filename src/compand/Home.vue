@@ -9,8 +9,31 @@
 </template>
 
 <script>
-  export default {
 
+  import { Toast } from 'mint-ui'
+
+  export default {
+    data() {
+      return {
+        lunbo : []
+      }
+    },
+    methods: {
+      getLunboInfo() {
+        this.$http.get('').then(response => {
+          if (response.body.status === 0) {
+            Toast('成功')
+          } else {
+            Toast('失败')
+          }
+        }, response => {
+          Toast('失败')
+        })
+      }
+    },
+    created() {
+      this.getLunboInfo()
+    },
   }
 </script>
 
