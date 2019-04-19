@@ -34,6 +34,7 @@
     .content {
         padding-top: 40px;
         overflow-x: hidden;
+        padding-bottom: 50px;
     }
     .v-enter{
         opacity: 0;
