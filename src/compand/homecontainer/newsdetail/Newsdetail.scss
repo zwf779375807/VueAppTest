@@ -1,0 +1,18 @@
+.newdetail-container{
+    padding: 0 4px;
+    .detail{
+        
+    }
+    h3{
+        font-size: 16px;
+        text-align: center;
+        margin: 10px 0;
+        color: red
+    }
+    p{
+        color: cornflowerblue;
+        font-size: 13px;
+        display: flex;
+        justify-content: space-between;
+    }
+}

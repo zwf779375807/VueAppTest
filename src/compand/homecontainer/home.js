@@ -10,7 +10,7 @@ export default {
     },
     methods: {
         getLunboInfo() {
-            this.$http.get('http://www.liulongbin.top:3005/api/getlunbo').then(response => {
+            this.$http.get('api/getlunbo').then(response => {
                 if (response.body.status === 0) {
                     this.lunbo = response.body.message
                 } else {

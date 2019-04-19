@@ -7,7 +7,7 @@ export default {
     },
     methods: {
         getNews() {
-            this.$http.get('http://www.liulongbin.top:3005/api/getnewslist')
+            this.$http.get('api/getnewslist')
                 .then(response => {
                     if (response.data.status===0) {
                         this.newsInfo=response.data.message

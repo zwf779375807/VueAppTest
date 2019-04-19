@@ -10,7 +10,7 @@ import 'mint-ui/lib/style.css'
 import './lib/css/mui.css'
 import './lib/css/icons-extra.css'
 import {
-    Header
+    Header,Button
 } from 'mint-ui'
 
 import {
@@ -23,10 +23,13 @@ Vue.component(SwipeItem.name, SwipeItem);
 import router from './router.js'
 
 Vue.component(Header.name, Header)
+Vue.component(Button.name, Button)
 
 Vue.filter('formatDate', function (date, pattern = 'YYYY-MM-DD hh:mm:ss') {
     return moment(date).format(pattern)
 })
+Vue.http.options.root = 'http://www.liulongbin.top:3005';
+Vue.http.options.emulateJSON = true;
 
 var vm = new Vue({
     el: "#app",

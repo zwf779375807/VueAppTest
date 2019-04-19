@@ -1,0 +1,11 @@
+<div class="newdetail-container">
+    <h3>{{newsdetail.title}}</h3>
+    <p>
+        <span>时间：{{newsdetail.add_time | formatDate}}</span>
+        <span>点击：{{newsdetail.click}}次</span>
+    </p>
+    <hr>
+    <div class="detail" v-html="newsdetail.content">
+    </div>
+    <submit :id='id'></submit>
+</div>
