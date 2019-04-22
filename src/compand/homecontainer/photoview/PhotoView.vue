@@ -7,6 +7,6 @@
 </script>
 
 
-<style>
+<style lang="scss">
     @import './PhotoView.scss'
 </style>

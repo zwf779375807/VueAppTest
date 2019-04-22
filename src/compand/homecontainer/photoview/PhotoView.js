@@ -1,14 +1,12 @@
 import {
     Toast
 } from 'mint-ui'
-
 import mui from '../../../lib/js/mui.js'
-
 export default {
-
     data() {
         return {
-            cateGroyList: []
+            cateGroyList: [],
+            photoList: [],
         }
     },
     mounted() {
@@ -18,6 +16,7 @@ export default {
     },
     created() {
         this.getAllCategory()
+        this.getPhotoInfos(0)
     },
 
     methods: {
@@ -36,6 +35,20 @@ export default {
                 }, err => {
                     Toast('请求失败')
                 })
+        },
+
+        getPhotoInfos(cateid) {
+            this.$http.get('api/getimages/' + cateid)
+                .then(result => {
+                        if (result.data.status == 0) {
+                            this.photoList = result.data.message
+                        } else {
+                            Toast('请求失败')
+                        }
+                    },
+                    err => {
+                        Toast('请求失败')
+                    })
         }
-    },
+    }
 }

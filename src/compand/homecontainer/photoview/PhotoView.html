@@ -4,13 +4,24 @@
         <div id="sliderSegmentedControl"
             class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
             <div class="mui-scroll">
-                <a class="mui-control-item mui-active"
-                    v-for="(item, index) in cateGroyList" :key="item.id">
+                <a :class="['mui-control-item', item.id==0 ? 'mui-active': '']" v-for="(item, index) in cateGroyList"
+                    :key="item.id" @click='getPhotoInfos(item.id)'>
                     {{item.title}}
                 </a>
-
             </div>
         </div>
 
     </div>
+
+
+    <ul class="photo-list">
+        <li v-for="item in photoList" :key="item.id">
+            <img v-lazy="item.img_url">
+            <div class="img-desc">
+                <h3 class="img-title">{{item.title}}</h3>
+                <div class="img-content">{{item.zhaiyao}}</div>
+            </div>
+
+        </li>
+    </ul>
 </div>

@@ -30,25 +30,30 @@
 
 </script>
 
-<style scoped>
+<style lang="scss" >
+    .mint-header {
+        z-index: 200;
+    }
+
     .content {
         padding-top: 40px;
         overflow-x: hidden;
         padding-bottom: 50px;
     }
-    .v-enter{
+
+    .v-enter {
         opacity: 0;
         transform: translateX(100%)
     }
-    .v-leave-to{
+
+    .v-leave-to {
         opacity: 0;
         transform: translateX(-100%);
         position: absolute
     }
 
     .v-enter-active,
-    .v-leave-active{
-       transition: all 0.5s ease
+    .v-leave-active {
+        transition: all 0.5s ease
     }
-    
 </style>

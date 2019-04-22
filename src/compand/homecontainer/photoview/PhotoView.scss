@@ -1,3 +1,51 @@
 * {
     touch-action: pan-y;
 }
+
+.photo-list {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    padding-bottom: 0;
+
+    li {
+        background-color: #ccc;
+        text-align: center;
+        margin-bottom: 10px;
+
+        box-shadow: 0 0 9px rgba(0, 0, 0, 0.5);
+        position: relative;
+
+        img {
+            width: 100%;
+            vertical-align: middle;
+        }
+
+        img[lazy=loading] {
+            width: 40px;
+            height: 300px;
+            margin: auto;
+        }
+
+        .img-desc {
+            color: white;
+            text-align: left;
+            position: absolute;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.4);
+            max-height: 84px;
+            padding-bottom: 5px;
+            padding-left: 5px;
+            padding-right: 5px;
+            overflow: hidden;
+
+            .img-title {
+                font-size: 14px;
+            }
+
+            .img-content {
+                font-size: 13px;
+            }
+        }
+    }
+}
