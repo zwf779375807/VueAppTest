@@ -36,6 +36,10 @@ Vue.filter('formatDate', function (date, pattern = 'YYYY-MM-DD hh:mm:ss') {
 Vue.http.options.root = 'http://www.liulongbin.top:3005';
 Vue.http.options.emulateJSON = true;
 
+
+import VuePreview from 'vue-preview'
+Vue.use(VuePreview)
+
 var vm = new Vue({
     el: "#app",
     render: c => c(app),

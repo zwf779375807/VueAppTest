@@ -43,6 +43,7 @@ export default {
                         add_time: new Date(),
                         content: this.msg
                     })
+                    this.msg =''; 
                 } else {
                     Toast('失败')
                 }

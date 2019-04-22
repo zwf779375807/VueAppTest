@@ -6,6 +6,7 @@ import SearchContainer from './compand/SearchContainer/Search.vue'
 import HomeNewsList from './compand/homecontainer/news/HomeNewsList.vue'
 import NewsDetail from './compand/homecontainer/newsdetail/Newsdetail.vue'
 import PhotoView from './compand/homecontainer/photoview/PhotoView.vue'
+import PhotoViewDetail from './compand/homecontainer/photoviewdetails/PhotoViewDetails.vue'
 var vueRouter = new VueRouter({
     routes: [{
             path: '/',
@@ -38,6 +39,10 @@ var vueRouter = new VueRouter({
         {
             path: '/home/photoview',
             component: PhotoView
+        },
+        {
+            path:'/home/photoview/photodetails/:id',
+            component:PhotoViewDetail
         }
     ],
     linkActiveClass: "mui-active"
