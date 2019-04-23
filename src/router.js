@@ -7,6 +7,10 @@ import HomeNewsList from './compand/homecontainer/news/HomeNewsList.vue'
 import NewsDetail from './compand/homecontainer/newsdetail/Newsdetail.vue'
 import PhotoView from './compand/homecontainer/photoview/PhotoView.vue'
 import PhotoViewDetail from './compand/homecontainer/photoviewdetails/PhotoViewDetails.vue'
+import GoodsLists from './compand/homecontainer/goods/GoodsLists.vue'
+import GoodsDetails from './compand/homecontainer/goodsdetails/GoodsDetails.vue';
+import GoodsDesc from './compand/homecontainer/goodsdesc/GoodsDesc.vue';
+import GoodComment from './compand/homecontainer/goodscomment/GoodComment.vue';
 var vueRouter = new VueRouter({
     routes: [{
             path: '/',
@@ -43,6 +47,20 @@ var vueRouter = new VueRouter({
         {
             path:'/home/photoview/photodetails/:id',
             component:PhotoViewDetail
+        },{
+            path:'/home/goodslists',
+            component: GoodsLists
+        },{
+            path:'/home/goodslists/goodsdetails/:id',
+            component:GoodsDetails
+        },{
+            path:'/home/goodslists/goodsdetails/goodsdesc/:id',
+            component:GoodsDesc,
+            name:'goodsdesc'
+        },{
+            path:'/home/goodslists/goodsdetails/goodscomment/:id',
+            component:GoodComment,
+            name:'goodscomment'
         }
     ],
     linkActiveClass: "mui-active"

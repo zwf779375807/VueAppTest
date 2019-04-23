@@ -22,6 +22,7 @@ import {
 } from 'mint-ui'
 Vue.component(Swipe.name, Swipe);
 Vue.component(SwipeItem.name, SwipeItem); */
+
 import Mint from 'mint-ui';
 Vue.use(Mint);
 

@@ -1,0 +1,63 @@
+.goods-container {
+    background-color: #eee;
+    overflow: hidden;
+
+    .mint-swipe {
+        height: 200px;
+        text-align: center
+    }
+
+    .banner-img {
+        height: 100%;
+    }
+
+    .price {
+        padding-top: 20px;
+
+        .marketprice {
+            em {
+                text-decoration: line-through;
+                font-style: normal;
+            }
+
+        }
+
+        .sellprice {
+            margin-left: 10px;
+
+            em {
+                color: red;
+                font-style: normal;
+            }
+        }
+    }
+
+    .sellnum {
+        color: #8F8F94;
+    }
+
+    .buy {
+        margin: 10px 0;
+    }
+
+    hr {
+        color: #8F8F94;
+        overflow: hidden;
+    }
+
+    .bottom {
+        margin: 0;
+        padding: 10px 10px;
+
+        .hr {
+            color: #8F8F94;
+        }
+
+        .photo {}
+
+        .pinlun {
+            margin: 20px 0;
+        }
+    }
+
+}
