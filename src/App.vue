@@ -4,7 +4,6 @@
             <span to="/" slot="left" @click='goback' v-show="flag">
                 <mt-button icon="back">返回</mt-button>
             </span>
-            <mt-button icon="more" slot="right"></mt-button>
         </mt-header>
         <transition>
             <router-view></router-view>
@@ -39,7 +38,7 @@
             }
         },
         created() {
-            this.flag = "$route.path==='/home"
+            this.flag = "$route.path==='/home" ? false : true
         },
         methods: {
             goback() {
