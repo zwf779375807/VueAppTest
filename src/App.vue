@@ -1,6 +1,11 @@
 <template>
     <div class="content">
-        <mt-header fixed title="Vue项目"></mt-header>
+        <mt-header fixed title="Vue项目">
+            <span to="/" slot="left" @click='goback' v-show="flag">
+                <mt-button icon="back">返回</mt-button>
+            </span>
+            <mt-button icon="more" slot="right"></mt-button>
+        </mt-header>
         <transition>
             <router-view></router-view>
         </transition>
@@ -27,10 +32,33 @@
 </template>
 
 <script>
-
+    export default {
+        data() {
+            return {
+                flag: false
+            }
+        },
+        created() {
+            this.flag = "$route.path==='/home"
+        },
+        methods: {
+            goback() {
+                this.$router.go(-1);
+            }
+        },
+        watch: {
+            "$route.path": function (newVar) {
+                if (newVar === '/home') {
+                    this.flag = false
+                } else {
+                    this.flag = true
+                }
+            }
+        },
+    }
 </script>
 
-<style lang="scss" >
+<style lang="scss">
     .mint-header {
         z-index: 200;
     }
