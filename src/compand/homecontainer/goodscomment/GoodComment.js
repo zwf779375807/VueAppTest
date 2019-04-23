@@ -1,3 +1,4 @@
+import submit from '../../subcompand/Submit.vue'
 export default{
     data() {
         return {
@@ -10,4 +11,7 @@ export default{
     created() {
         
     },
+    components: {
+        'submit': submit
+    }
 }
