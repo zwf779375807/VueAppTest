@@ -1,0 +1,23 @@
+<div class="shopping-container">
+    <div class="mui-card" v-for="(item, index) in goods" :key="item.id">
+        <div class="mui-card-content" >
+            <div class="mui-card-content-inner">
+                <mt-switch></mt-switch>
+                <img :src="item.thumb_path" alt="">
+
+                <div class="info">
+                    <h1>{{item.title}}</h1>
+                    <div class="desc">
+                        <span class="price">￥{{item.sell_price}}</span>
+                        <div class="mui-numbox" data-numbox-min='1'>
+                            <button class="mui-btn mui-btn-numbox-minus" type="button">-</button>
+                            <input id="test" class="mui-input-numbox" type="number" :value="$store.getters.getCarInfo[item.id]" readonly/>
+                            <button class="mui-btn mui-btn-numbox-plus" type="button">+</button>
+                        </div>
+                        <a href="#">删除</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

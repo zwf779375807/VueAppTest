@@ -19,7 +19,9 @@
                 <span class="mui-tab-label">会员</span>
             </router-link>
             <router-link class="mui-tab-item" to="/shopping">
-                <span class="mui-icon mui-icon-extra mui-icon-extra-cart"><span class="mui-badge">0</span></span>
+                <span class="mui-icon mui-icon-extra mui-icon-extra-cart">
+                    <span class="mui-badge">{{ $store.getters.getCarCount}}</span>
+                </span>
                 <span class="mui-tab-label">购物车</span>
             </router-link>
             <router-link class="mui-tab-item" to="/search">
@@ -38,7 +40,7 @@
             }
         },
         created() {
-            this.flag = "$route.path==='/home" ? false : true
+            this.flag = this.$route.path==='/home' ? false : true
         },
         methods: {
             goback() {

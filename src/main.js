@@ -41,8 +41,55 @@ Vue.http.options.emulateJSON = true;
 import VuePreview from 'vue-preview'
 Vue.use(VuePreview)
 
+import Vuex from 'vuex'
+Vue.use(Vuex)
+
+var car = JSON.parse(localStorage.getItem('car') || '[]')
+
+var store = new Vuex.Store({
+    state: {
+        car: car
+    },
+    mutations: {
+        addtocar(state, goodsinfo) {
+            var flag = false
+            state.car.some(item => {
+                if (item.id === goodsinfo.id) {
+                    item.count += goodsinfo.count;
+                    flag = true
+                    return true
+                }
+            })
+            if (!flag) {
+                state.car.push(goodsinfo)
+            }
+
+            localStorage.setItem('car', JSON.stringify(state.car))
+        }
+    },
+    getters: {
+        getCarCount(state) {
+            var c = 0
+            state.car.forEach(item => {
+                if (item.selectedStatus) {
+                    c += item.count
+                }
+            })
+            return c
+        },
+        getCarInfo(state) {
+            var o = {}
+            state.car.forEach(item => {
+                o[item.id] = item.count;
+            })
+            return o;
+        }
+    }
+})
+
 var vm = new Vue({
     el: "#app",
     render: c => c(app),
-    router
+    router,
+    store
 })

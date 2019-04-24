@@ -9,6 +9,7 @@ export default {
             id: this.$route.params.id,
             lunbos: [],
             goodscontent: '',
+            goodsCount: 1,
         }
     },
 
@@ -64,6 +65,16 @@ export default {
                     currentId
                 }
             })
+        },
+
+        addcar() {
+            var goodsInfo = {
+                id: this.id,
+                count: this.goodsCount,
+                price: this.goodscontent.sell_price,
+                selectedStatus: true,
+            }
+            this.$store.commit('addtocar', goodsInfo)
         }
     },
 }

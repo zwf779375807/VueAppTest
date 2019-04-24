@@ -1,13 +1,12 @@
-<template>
-    <div>
-        <h3>购物车</h3>  
-    </div>
+<template src="./Shopping.html">
+
 </template>
 
-<script>
+<script src="./Shopping.js">
 
 </script>
 
 
-<style scoped>
+<style scoped lang="scss">
+    @import  './Shopping.scss'
 </style>
